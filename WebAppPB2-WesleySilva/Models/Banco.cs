@@ -10,7 +10,9 @@ namespace WebAppPB2_WesleySilva.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required(ErrorMessage = "Agencia é obrigatória !!")]
         public string Agencia { get; set; }
+        [Required(ErrorMessage = "Conta é obrigatória !!")]
         public string ContaCorrente { get; set; }
         public TipoConta Tipo_Conta { get; set; }
     }

@@ -14,6 +14,10 @@ namespace WebAppPB2_WesleySilva.Controllers
     {
         private BancoContext db = new BancoContext();
 
+
+       
+
+
         // GET: Bancos
         public ActionResult Index()
         {
