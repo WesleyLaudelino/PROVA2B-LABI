@@ -14,7 +14,11 @@ namespace WebAppPB2_WesleySilva.Controllers
     {
         private BancoContext db = new BancoContext();
 
-
+        public ActionResult VerificaConta(string Conta)
+        {
+            return Json(db.Bancoes.All(c => c.ContaCorrente.ToLower() != Conta.ToLower())
+                , JsonRequestBehavior.AllowGet);
+        }
        
 
 

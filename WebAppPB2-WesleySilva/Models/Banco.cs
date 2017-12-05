@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace WebAppPB2_WesleySilva.Models
 {
@@ -13,6 +14,7 @@ namespace WebAppPB2_WesleySilva.Models
         [Required(ErrorMessage = "Agencia é obrigatória !!")]
         public string Agencia { get; set; }
         [Required(ErrorMessage = "Conta é obrigatória !!")]
+        [Remote("VerificaConta", "Bancos", ErrorMessage = "Conta já existe !!")]
         public string ContaCorrente { get; set; }
         public TipoConta Tipo_Conta { get; set; }
     }
