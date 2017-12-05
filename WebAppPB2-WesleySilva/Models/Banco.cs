@@ -14,7 +14,8 @@ namespace WebAppPB2_WesleySilva.Models
         [Required(ErrorMessage = "Agencia é obrigatória !!")]
         public string Agencia { get; set; }
         [Required(ErrorMessage = "Conta é obrigatória !!")]
-        [Remote("VerificaConta", "Bancos", ErrorMessage = "Conta já existe !!")]
+        // O código abaixo foi comentado porque não funcionou. Não deixa grava o registro
+        //[Remote("VerificaConta", "ContaCorrente", ErrorMessage = "Conta já existe !!")]
         public string ContaCorrente { get; set; }
         public TipoConta Tipo_Conta { get; set; }
     }
